@@ -11,15 +11,14 @@
 		<property name="saludo" value="Que onda mundillo!"></property>
 	</bean>
 
-	<bean id="persona" class="com.dkghost.beans.Persona">
-		<property name="pais" ref="pais"></property>
-		<constructor-arg type="int" index="0" value="1"></constructor-arg>
-		<constructor-arg type="String" index="2" value="dkghost"></constructor-arg>
-		<constructor-arg value="Jose"></constructor-arg>
+	<bean id="persona" class="com.dkghost.beans.Persona" autowire="byName">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Jose"></property>
+		<property name="apodo" value="dkghost"></property>
 	</bean>
 
 	<bean id="pais" class="com.dkghost.beans.Pais">
-		<property name="ciudad" ref="ciudad"></property>
+		<!-- <property name="ciudad" ref="ciudad"></property> -->
 		<property name="nombre" value="Mexico"></property>
 	</bean>
 
