@@ -7,7 +7,15 @@ public class Persona {
 	private String apodo;
 	private Pais pais;
 	private Ciudad ciudad;
-	
+
+	private void init() {
+		System.out.println("Antes de Inicializar el Bean");
+	}
+
+	private void destroy() {
+		System.out.println("Bean a punto de ser destruido");
+	}
+
 	public Ciudad getCiudad() {
 		return ciudad;
 	}
@@ -46,6 +54,6 @@ public class Persona {
 
 	public void setApodo(String apodo) {
 		this.apodo = apodo;
-	}		
-	
+	}
+
 }
