@@ -11,7 +11,15 @@
 		<property name="saludo" value="Que onda mundillo!"></property>
 	</bean>
 
-	<bean id="persona" class="com.dkghost.beans.Persona" autowire="byName">
+
+<!--	<bean id="persona" class="com.dkghost.beans.Persona" autowire="byName">-->
+<!--		<property name="id" value="1"></property>-->
+<!--		<property name="nombre" value="Jose"></property>-->
+<!--		<property name="apodo" value="dkghost"></property>-->
+<!--	</bean>-->
+
+<!-- bean persona con scope prototype -->	
+	<bean id="persona" class="com.dkghost.beans.Persona" autowire="byName" scope="prototype">
 		<property name="id" value="1"></property>
 		<property name="nombre" value="Jose"></property>
 		<property name="apodo" value="dkghost"></property>
