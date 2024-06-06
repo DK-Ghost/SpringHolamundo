@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="init"
+	default-destroy-method="destroy">
 
 	<bean id="mundo" class="com.dkghost.beans.Mundo">
 		<property name="saludo" value="Hola Mundo!"></property>
@@ -18,8 +20,8 @@
 <!--		<property name="apodo" value="dkghost"></property>-->
 <!--	</bean>-->
 
-<!-- bean persona con scope prototype -->	
-	<bean id="persona" class="com.dkghost.beans.Persona" autowire="byName" scope="prototype">
+<!-- bean persona con scope prototype, init-method y destroy-method -->	
+	<bean id="persona" class="com.dkghost.beans.Persona" autowire="byName" scope="singleton" lazy-init="true">
 		<property name="id" value="1"></property>
 		<property name="nombre" value="Jose"></property>
 		<property name="apodo" value="dkghost"></property>

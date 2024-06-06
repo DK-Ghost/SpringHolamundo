@@ -41,10 +41,10 @@ public class App {
 		per.setId(0);
 		per.setNombre("Neegga");
 		per.setApodo("Lee");
-		Persona per2 = (Persona) appContext.getBean("persona");
+//		Persona per2 = (Persona) appContext.getBean("persona");
 		
 		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+ per.getPais().getNombre()+" "+per.getCiudad().getNombre());
-		System.out.println(per2.getId()+" "+per2.getNombre()+" "+per2.getApodo()+" "+ per2.getPais().getNombre()+" "+per2.getCiudad().getNombre());
+//		System.out.println(per2.getId()+" "+per2.getNombre()+" "+per2.getApodo()+" "+ per2.getPais().getNombre()+" "+per2.getCiudad().getNombre());
 		
 		
 		((ConfigurableApplicationContext) appContext).close();
