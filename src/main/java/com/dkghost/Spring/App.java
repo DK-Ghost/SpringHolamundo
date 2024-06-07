@@ -36,15 +36,24 @@ public class App {
 	
 		
 //----------------------------------Ejemplo de Bean Scope----------------------------------------------------------------		
+//		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/dkghost/xml/beans.xml");
+//		Persona per = (Persona) appContext.getBean("persona");
+//		per.setId(0);
+//		per.setNombre("Neegga");
+//		per.setApodo("Lee");
+//		Persona per2 = (Persona) appContext.getBean("persona");
+//		
+//		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+ per.getPais().getNombre()+" "+per.getCiudad().getNombre());
+//		System.out.println(per2.getId()+" "+per2.getNombre()+" "+per2.getApodo()+" "+ per2.getPais().getNombre()+" "+per2.getCiudad().getNombre());
+		
+//-------------------------------------------------Ejecucion para ejemplo de postprocessor-------------------------------------
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/dkghost/xml/beans.xml");
 		Persona per = (Persona) appContext.getBean("persona");
-		per.setId(0);
-		per.setNombre("Neegga");
-		per.setApodo("Lee");
-//		Persona per2 = (Persona) appContext.getBean("persona");
+		Ciudad ciu = (Ciudad) appContext.getBean("ciudad");
 		
-		System.out.println(per.getId()+" "+per.getNombre()+" "+per.getApodo()+" "+ per.getPais().getNombre()+" "+per.getCiudad().getNombre());
-//		System.out.println(per2.getId()+" "+per2.getNombre()+" "+per2.getApodo()+" "+ per2.getPais().getNombre()+" "+per2.getCiudad().getNombre());
+		System.out.println(per.getApodo());
+		System.out.println(ciu.getNombre());
+		
 		
 		
 		((ConfigurableApplicationContext) appContext).close();
