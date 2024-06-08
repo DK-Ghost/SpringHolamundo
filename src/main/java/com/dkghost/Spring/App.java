@@ -7,9 +7,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.dkghost.beans.AppConfig;
 import com.dkghost.beans.AppConfig2;
+import com.dkghost.beans.Barcelona;
 import com.dkghost.beans.Ciudad;
+import com.dkghost.beans.Jugador;
 import com.dkghost.beans.Mundo;
 import com.dkghost.beans.Persona;
+import com.dkghost.interfaces.IEquipo;
 
 public class App {
 
@@ -47,14 +50,23 @@ public class App {
 //		System.out.println(per2.getId()+" "+per2.getNombre()+" "+per2.getApodo()+" "+ per2.getPais().getNombre()+" "+per2.getCiudad().getNombre());
 		
 //-------------------------------------------------Ejecucion para ejemplo de postprocessor-------------------------------------
+//		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/dkghost/xml/beans.xml");
+//		Persona per = (Persona) appContext.getBean("persona");
+//		Ciudad ciu = (Ciudad) appContext.getBean("ciudad");
+//		
+//		System.out.println(per.getApodo());
+//		System.out.println(ciu.getNombre());
+//		
+//---------------------------------------Ejemplo de uso de interfaces-----------------------------
+		
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/dkghost/xml/beans.xml");
-		Persona per = (Persona) appContext.getBean("persona");
-		Ciudad ciu = (Ciudad) appContext.getBean("ciudad");
 		
-		System.out.println(per.getApodo());
-		System.out.println(ciu.getNombre());
+		Jugador jug = (Jugador) appContext.getBean("messi");
+//		System.out.println(jug.getNombre()+"-"+jug.getEquipo().mostrar());
 		
 		
+		
+	
 		
 		((ConfigurableApplicationContext) appContext).close();
 	}
