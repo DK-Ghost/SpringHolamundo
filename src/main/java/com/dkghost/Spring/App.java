@@ -60,12 +60,13 @@ public class App {
 //---------------------------------------Ejemplo de uso de interfaces-----------------------------
 		
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/dkghost/xml/beans.xml");
-//		Jugador jug = (Jugador) appContext.getBean("messi");
-//		
+		
+		Jugador jug = (Jugador) appContext.getBean("messi");
 //		System.out.println(jug.getNombre()+"-"+jug.getEquipo().mostrar());
 		
-		IEquipo bar = (IEquipo) appContext.getBean("juventus");
-		System.out.println(bar.mostrar());
+		
+		
+	
 		
 		((ConfigurableApplicationContext) appContext).close();
 	}
