@@ -10,32 +10,15 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-	<bean class="com.dkghost.beans.DkghostBeanPostProcessor"></bean>
 
-<!--	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>-->
+<bean id="messi" class="com.dkghost.beans.Jugador">
+	<property name="numero" value="10"></property>
+	<property name="nombre" value="Lionel Messi"></property>
+	<property name="equipo" ref="barcelona"></property>
+</bean>
 
-	<!--	<bean id="persona" class="com.dkghost.beans.Persona"
-	autowire="byName">-->
-	<!--		<property name="id" value="1"></property>-->
-	<!--		<property name="nombre" value="Jose"></property>-->
-	<!--		<property name="apodo" value="dkghost"></property>-->
-	<!--	</bean>-->
+<bean id = "barcelona" class="com.dkghost.beans.Barcelona"></bean>
 
-	<!-- bean persona con scope prototype, init-method y destroy-method -->
-	<bean id="persona" class="com.dkghost.beans.Persona" autowire="byName">
-		<property name="id" value="1"></property>
-		<property name="nombre" value="Jose"></property>
-		<property name="apodo" value="dkghost"></property>
-	</bean>
-
-	<bean id="pais" class="com.dkghost.beans.Pais">
-		<!-- <property name="ciudad" ref="ciudad"></property> -->
-		<property name="nombre" value="Mexico"></property>
-	</bean>
-
-	<bean id="ciudad" class="com.dkghost.beans.Ciudad">
-		<property name="nombre" value="Zacatecas"></property>
-	</bean>
+<bean id = "juventus" class="com.dkghost.beans.Juventus"></bean>
 
 </beans>
