@@ -62,7 +62,7 @@ public class App {
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/dkghost/xml/beans.xml");
 		
 		Jugador jug = (Jugador) appContext.getBean("messi");
-//		System.out.println(jug.getNombre()+"-"+jug.getEquipo().mostrar());
+		System.out.println(jug.getNombre()+"-"+jug.getEquipo().mostrar());
 		
 		
 		
