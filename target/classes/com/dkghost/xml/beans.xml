@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
-<!--	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
-<!--	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"-->
-<!--	default-init-method="init"-->
-<!--	default-destroy-method="destroy"-->
-<!-->-->
-
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
 
-<bean id="messi" class="com.dkghost.beans.Jugador">
-	<property name="numero" value="10"></property>
-	<property name="nombre" value="Lionel Messi"></property>
-<!--	<property name="equipo" ref="barcelona"></property>-->
-</bean>
-
-<bean id = "barcelona" class="com.dkghost.beans.Barcelona"></bean>
-
-<bean id = "juventus" class="com.dkghost.beans.Juventus"></bean>
+<context:component-scan base-package="com.dkghost"></context:component-scan>
 
 </beans>

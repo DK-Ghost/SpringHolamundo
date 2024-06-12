@@ -1,13 +1,21 @@
 package com.dkghost.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import com.dkghost.interfaces.IEquipo;
 
+@Component("messi")
 public class Jugador {
 	
 	private int numero;
+	@Value("Lionel Messi")
 	private String nombre;
+	@Autowired
+	//@Qualifier("barcelonaQualifier")
 	private IEquipo equipo;
 	
 	public int getNumero() {
@@ -26,7 +34,7 @@ public class Jugador {
 		return equipo;
 	}
 	
-	@Required
+	//@Required
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}
