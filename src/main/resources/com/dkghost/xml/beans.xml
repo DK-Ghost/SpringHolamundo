@@ -8,21 +8,6 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
 
-<context:annotation-config />
-	
-<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
-<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
-
-<bean id="messi" class="com.dkghost.beans.Jugador">
-	<property name="numero" value="10"></property>
-	<property name="nombre" value="Lionel Messi"></property>
-<!--	<property name="equipo" ref="barcelona"></property>-->
-</bean>
-
-<bean id = "barcelona" class="com.dkghost.beans.Barcelona">
-	<qualifier value="barcelonaQualifier"></qualifier>
-</bean>
-
-<bean id = "juventus" class="com.dkghost.beans.Juventus"></bean>
+<context:component-scan base-package="com.dkghost"></context:component-scan>
 
 </beans>
